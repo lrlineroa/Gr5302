@@ -1,0 +1,13 @@
+rails generate scaffold role nam_role:string desc_role:string
+rails generate scaffold material_type nam_material_type:string desc_material_type:string
+rails generate scaffold multimedia_type nam_multimedia_type:string desc_multimedia_type:string
+rails generate scaffold user nam1_user:string nam2_user:string lastnam1_user:string lastnam2_user:string tel_user:string address_user:string identification_user:string email_user:string  password:string date_user:date role:references
+rails generate scaffold multimedia nam_multimedia:string desc_multimedia:string id_multimedia_type:integer multimedia_type:references
+rails generate scaffold material nam_material:string desc_material:string id_material_type:integer material_type:references
+rails generate scaffold environment nam_ environment:string desc_ environment:string multimedia:references user:references
+rails generate scaffold category nam_category:string desc_category:string material:references multimedia:references
+rails generate scaffold use nam_use:string desc_ use:string material:references user:references
+rails generate scaffold recycling_center nam_recycling_center:string desc_recycling_center:string address_recycling_center:string tel_recycling_center:string web_recycling_center:string
+rails generate scaffold visit nam_visit:string desc_ visit:string recycling_center:references user:references
+rails generate scaffold transport_material nam_transport_material:string desc_transport_material:string date_transport_material:date material:references recycling_center:references
+

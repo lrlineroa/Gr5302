@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nam_category: MyString
+  desc_category: MyString
+  material: one
+  multimedia: one
+
+two:
+  nam_category: MyString
+  desc_category: MyString
+  material: two
+  multimedia: two

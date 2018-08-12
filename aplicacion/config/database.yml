@@ -1,0 +1,64 @@
+# PostgreSQL. Versions 9.1 and up are supported.
+#
+# Install the pg driver:
+#   gem install pg
+# On OS X with Homebrew:
+#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+# On OS X with MacPorts:
+#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
+# On Windows:
+#   gem install pg
+#       Choose the win32 build.
+#       Install PostgreSQL and put its /bin directory on your path.
+#
+# Configure Using Gemfile
+# gem 'pg'
+#
+default: &default
+  adapter: postgresql
+  encoding: UTF8
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  adapter: postgresql
+  encoding: UTF8
+  database: proyecto
+  pool: 5
+  username: postgres
+  password: 1234
+
+  # Conectar en un socket TCP. Omitido por defecto ya que el cliente usa un
+  # socket de dominio que no necesita configuración. Windows no tiene
+  # sockets de dominio, así descomenta estas líneas.
+  # host: localhost
+  # puerto: 5432
+
+  # Ruta de búsqueda de esquema. El servidor predeterminado es $ usuario, público
+  # schema_search_path: myapp, sharedapp, public
+
+  # Niveles mínimos de registro, en orden creciente:
+  #    debug5, debug4, debug3, debug2, debug1,
+  #    registro, aviso, advertencia, error, fatal y pánico
+  # El servidor se fija por defecto en el aviso.
+  # min_messages: advertencia
+
+# Advertencia: la base de datos definida como "prueba" se borrará y
+# re-generado desde su base de datos de desarrollo cuando ejecuta "rake".
+# No configure este db como el desarrollo o la producción.
+test:
+  adapter: postgresql
+  encoding: UTF8
+  database: proyecto
+  pool: 5
+  username: postgres
+  password: 1234
+
+production:
+  adapter: postgresql
+  encoding: UTF8
+  database: proyecto
+  pool: 5
+  username: postgres
+  password: 1234

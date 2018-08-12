@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nam_transport_material: MyString
+  desc_transport_material: MyString
+  date_transport_material: 2018-08-11
+  material: one
+  recycling_center: one
+
+two:
+  nam_transport_material: MyString
+  desc_transport_material: MyString
+  date_transport_material: 2018-08-11
+  material: two
+  recycling_center: two

@@ -1,0 +1,2 @@
+class RecyclingCenter < ApplicationRecord
+end

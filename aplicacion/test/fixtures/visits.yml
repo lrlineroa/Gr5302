@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nam_visit: MyString
+  desc_: MyString
+  visit: MyString
+  recycling_center: one
+  user: one
+
+two:
+  nam_visit: MyString
+  desc_: MyString
+  visit: MyString
+  recycling_center: two
+  user: two

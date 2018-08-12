@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nam_: MyString
+  environment: MyString
+  desc_: MyString
+  environment: MyString
+  multimedia: one
+  user: one
+
+two:
+  nam_: MyString
+  environment: MyString
+  desc_: MyString
+  environment: MyString
+  multimedia: two
+  user: two
