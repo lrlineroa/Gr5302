@@ -1,2 +1,0 @@
-class RecyclingCenter < ApplicationRecord
-end

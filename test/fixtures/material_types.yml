@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  nam_material_type: MyString
-  desc_material_type: MyString
-
-two:
-  nam_material_type: MyString
-  desc_material_type: MyString

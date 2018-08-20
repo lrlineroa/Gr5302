@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  nam_multimedia_type: MyString
-  desc_multimedia_type: MyString
-
-two:
-  nam_multimedia_type: MyString
-  desc_multimedia_type: MyString
