@@ -16,70 +16,46 @@
 #
 default: &default
   adapter: postgresql
-  encoding: unicode
+  encoding: UTF8
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: ec2-50-17-194-129.compute-1.amazonaws.com
+  username: vdbvisgqwoihlp
+  password: f00eb942fd74b46f5b6745a6a1844bb167de9fc232331617f179c8de8aca77cd
 
 development:
   <<: *default
-  database: adminapp_development
+  adapter: postgresql
+  encoding: UTF8
+  database: dn1ohq8pmuhg0
+ 
 
-  # The specified database role being used to connect to postgres.
-  # To create additional roles in postgres see `$ createuser --help`.
-  # When left blank, postgres will use the default role. This is
-  # the same name as the operating system user that initialized the database.
-  #username: adminapp
+  # Conectar en un socket TCP. Omitido por defecto ya que el cliente usa un
+  # socket de dominio que no necesita configuración. Windows no tiene
+  # sockets de dominio, así descomenta estas líneas.
+  # host: localhost
+  # puerto: 5432
 
-  # The password associated with the postgres role (username).
-  #password:
+  # Ruta de búsqueda de esquema. El servidor predeterminado es $ usuario, público
+  # schema_search_path: myapp, sharedapp, public
 
-  # Connect on a TCP socket. Omitted by default since the client uses a
-  # domain socket that doesn't need configuration. Windows does not have
-  # domain sockets, so uncomment these lines.
-  #host: localhost
+  # Niveles mínimos de registro, en orden creciente:
+  #    debug5, debug4, debug3, debug2, debug1,
+  #    registro, aviso, advertencia, error, fatal y pánico
+  # El servidor se fija por defecto en el aviso.
+  # min_messages: advertencia
 
-  # The TCP port the server listens on. Defaults to 5432.
-  # If your server runs on a different port number, change accordingly.
-  #port: 5432
-
-  # Schema search path. The server defaults to $user,public
-  #schema_search_path: myapp,sharedapp,public
-
-  # Minimum log levels, in increasing order:
-  #   debug5, debug4, debug3, debug2, debug1,
-  #   log, notice, warning, error, fatal, and panic
-  # Defaults to warning.
-  #min_messages: notice
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+# Advertencia: la base de datos definida como "prueba" se borrará y
+# re-generado desde su base de datos de desarrollo cuando ejecuta "rake".
+# No configure este db como el desarrollo o la producción.
 test:
-  <<: *default
-  database: adminapp_test
+  adapter: postgresql
+  encoding: UTF8
+  database: 
 
-# As with config/secrets.yml, you never want to store sensitive information,
-# like your database password, in your source code. If your source code is
-# ever seen by anyone, they now have access to your database.
-#
-# Instead, provide the password as a unix environment variable when you boot
-# the app. Read http://guides.rubyonrails.org/configuring.html#configuring-a-database
-# for a full rundown on how to provide these environment variables in a
-# production deployment.
-#
-# On Heroku and other platform providers, you may have a full connection URL
-# available as an environment variable. For example:
-#
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
-#
-# You can use this database configuration with:
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+
 production:
-  <<: *default
-  database: adminapp_production
-  username: adminapp
-  password: <%= ENV['ADMINAPP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: UTF8
+  database: 
